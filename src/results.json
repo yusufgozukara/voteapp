@@ -1,0 +1,16 @@
+[
+    {
+        "id":1,
+        "img":"çarpı",
+        "title":"Geçersiz Oy"
+    },
+    {
+        "id":2,
+        "img":"nike",
+        "title":"Geçerli Oy"
+    },{
+        "id":3,
+        "img":"zarf",
+        "title":"Toplam Oy"
+    }
+]

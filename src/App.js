@@ -1,6 +1,7 @@
 import "./App.css";
 import Card from "./components/Card/Card";
 import InvalidVote from "./components/InvalidVote/InvalidVote";
+import Results from "./components/Results/Results";
 import persons from "./person.json";
 import { useState } from "react";
 
@@ -15,6 +16,7 @@ function App() {
         ))}
       </div>
       <InvalidVote />
+      <Results />
     </div>
   );
 }

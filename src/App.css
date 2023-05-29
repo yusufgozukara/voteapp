@@ -12,6 +12,7 @@
 }
 .invalid {
   display: flex;
+  width: 800px;
   /* flex-wrap: wrap; */
   margin: auto;
   border: 1px solid yellow;
@@ -20,18 +21,29 @@
 
 .invalid p {
   width: 250px;
-  background-color: gray;
+  background-color: #f1f1f1;
   border-radius: 1rem;
-  color: white;
+  color: #8697a3;
   padding: 2rem;
-  margin: 1rem;
-  font-size: 1.5rem;
+  margin: auto;
+  font-size: 1.3rem;
   line-height: 20px;
+}
+
+.invalidfirstdiv {
+  width: 400px;
+  margin: auto;
+  /* border: 1px solid white; */
+}
+.invalidseconddiv {
+  width: 400px;
+  margin: auto;
+  /* border: 1px solid white; */
 }
 
 .invalidMinus {
   width: 150px;
-  background-color: #86c600;
+  background-color: #b1b1b1;
   border-radius: 1rem;
   color: white;
   padding: 2rem;
