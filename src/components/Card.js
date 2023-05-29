@@ -1,4 +1,5 @@
 import React from "react";
+import "./Card.css";
 
 const Card = ({ person, vote, setVote }) => {
   const { id, name, image } = person;
@@ -13,19 +14,23 @@ const Card = ({ person, vote, setVote }) => {
   };
 
   return (
-    <>
-      <div className="ustdiv">
+    <div className="ustdiv">
+      <div className="divici">
         <img
           style={{ width: "200px", height: "200px", borderRadius: "50%" }}
           src={image}
           alt="person_image"
         />
         <h1>{name}</h1>
-        <h1>{vote}</h1>
-        <button onClick={increaseVote}> + </button>
-        <button onClick={decreaseVote}> - </button>
+        <p className="voteBox">{vote}</p>
+        <button className="plus" onClick={increaseVote}>
+          +
+        </button>
+        <button className="minus" onClick={decreaseVote}>
+          -
+        </button>
       </div>
-    </>
+    </div>
   );
 };
 
