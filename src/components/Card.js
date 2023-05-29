@@ -1,22 +1,27 @@
 import React from "react";
 
-const Card = ({ person }) => {
+const Card = ({ person, vote, setVote }) => {
   const { id, name, image } = person;
 
   const increaseVote = () => {
-    console.log("oyu artır");
+    setVote((vote += 1));
+    console.log(setVote);
   };
 
   const decreaseVote = () => {
-    console.log("oyu azalt");
+    setVote((vote -= 1));
   };
 
   return (
     <>
-      <div>
-        <img src={image} alt="person_image" />
+      <div className="ustdiv">
+        <img
+          style={{ width: "200px", height: "200px", borderRadius: "50%" }}
+          src={image}
+          alt="person_image"
+        />
         <h1>{name}</h1>
-        <h1>0</h1>
+        <h1>{vote}</h1>
         <button onClick={increaseVote}> + </button>
         <button onClick={decreaseVote}> - </button>
       </div>
