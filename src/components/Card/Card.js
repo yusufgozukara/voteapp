@@ -6,7 +6,6 @@ const Card = ({ person, vote, setVote }) => {
 
   const increaseVote = () => {
     setVote((vote += 1));
-    console.log(setVote);
   };
 
   const decreaseVote = () => {
@@ -16,12 +15,8 @@ const Card = ({ person, vote, setVote }) => {
   return (
     <div className="ustdiv">
       <div className="divici">
-        <img
-          style={{ width: "200px", height: "200px", borderRadius: "50%" }}
-          src={image}
-          alt="person_image"
-        />
-        <h1>{name}</h1>
+        <img className="candidateImage" src={image} alt="person_image" />
+        <p className="candidateName">{name}</p>
         <p className="voteBox">{vote}</p>
         <button className="plus" onClick={increaseVote}>
           +

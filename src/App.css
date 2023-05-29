@@ -1,0 +1,52 @@
+.cardContainer {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.general {
+  margin: auto;
+  text-align: center;
+}
+.invalid {
+  display: flex;
+  /* flex-wrap: wrap; */
+  margin: auto;
+  border: 1px solid yellow;
+  justify-content: center;
+}
+
+.invalid p {
+  width: 250px;
+  background-color: gray;
+  border-radius: 1rem;
+  color: white;
+  padding: 2rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  line-height: 20px;
+}
+
+.invalidMinus {
+  width: 150px;
+  background-color: #86c600;
+  border-radius: 1rem;
+  color: white;
+  padding: 2rem;
+  margin: 1rem;
+  font-size: 3rem;
+  line-height: 20px;
+}
+
+.invalidPlus {
+  width: 150px;
+  background-color: #86c600;
+  border-radius: 1rem;
+  color: white;
+  padding: 2rem;
+  margin: 1rem;
+  font-size: 3rem;
+  line-height: 20px;
+}

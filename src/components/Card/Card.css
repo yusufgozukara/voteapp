@@ -1,0 +1,64 @@
+.ustdiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border: 1px solid pink;
+}
+
+.divici {
+  width: 400px;
+  border: 1px solid red;
+  /* margin: 1rem; */
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.candidateImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.candidateName {
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  margin: 1rem 0 0 0;
+  width: 320px;
+  background-color: #034d92;
+  color: white;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+}
+
+.voteBox {
+  font-size: 3rem;
+  border: 1px solid gray;
+  background-color: #f1f1f1;
+  border-radius: 0 0 5px 5px;
+  margin-bottom: 1rem;
+  width: 330px;
+  text-align: center;
+  color: #8697a3;
+}
+
+.plus {
+  background-color: #86c600;
+  border-radius: 1rem;
+  /* margin: 1rem; */
+  padding: 2rem 6rem;
+  font-size: 3rem;
+  width: 330px;
+  color: white;
+}
+.minus {
+  background-color: #d3d3d3;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem 6rem;
+  font-size: 3rem;
+  width: 330px;
+  color: white;
+}
