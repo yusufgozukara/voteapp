@@ -4,6 +4,7 @@ import InvalidVote from "./components/InvalidVote/InvalidVote";
 import Results from "./components/Results/Results";
 import persons from "./person.json";
 import { useState } from "react";
+import results from "./results.json";
 
 function App() {
   const [vote, setVote] = useState(0);
@@ -16,7 +17,10 @@ function App() {
         ))}
       </div>
       <InvalidVote />
-      <Results />
+
+      {results.map((result) => (
+        <Results result={result} />
+      ))}
     </div>
   );
 }

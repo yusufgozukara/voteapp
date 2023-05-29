@@ -1,0 +1,24 @@
+.resultdiv {
+  width: 800px;
+  margin: auto;
+  border: 1px solid green;
+  display: flex;
+}
+
+.resultIcon {
+  background-color: #d9d9d9;
+  width: 10%;
+  padding: 0.5rem;
+}
+
+.resultTitle {
+  background-color: #c8c9ca;
+  width: 80%;
+  padding: 0.5rem;
+}
+
+.resultNumber {
+  background-color: #c8c9ca;
+  width: 10%;
+  padding: 0.5rem;
+}
