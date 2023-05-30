@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Results.css";
 
-const Results = ({ result }) => {
-  const { title, img } = result;
+const Results = ({ people }) => {
+  // const { title, img } = result;
+  let [validVotes, setValidVotes] = useState(0);
+
+  useEffect(() => {
+    let total = 0;
+    people.forEach((element) => {
+      total += element.vote;
+    });
+    setValidVotes(total);
+  });
   return (
     <div className="resultdiv">
-      <p className="resultIcon">{img}</p>
-      <p className="resultTitle">{title}</p>
-      <p className="resultNumber">0</p>
+      <p className="resultIcon">toplam</p>
+      <p className="resultTitle">Geçerli Oy</p>
+      <p className="resultNumber">{validVotes}</p>
     </div>
   );
 };
