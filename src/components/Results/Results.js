@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Results.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Results = ({ people }) => {
   // const { title, img } = result;
@@ -25,7 +27,9 @@ const Results = ({ people }) => {
         <p className="resultNumber">{validVotes}</p>
       </div>
       <div className="resultdiv">
-        <p className="resultIcon">zarf</p>
+        <p className="resultIcon">
+          <FontAwesomeIcon icon={faEnvelope} />
+        </p>
         <p className="resultTitle">Toplam</p>
         <p className="resultNumber">{validVotes}</p>
       </div>
