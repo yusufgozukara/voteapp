@@ -1,8 +1,9 @@
 .resultdiv {
-  width: 800px;
+  width: 680px;
   margin: auto;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: flex;
+  margin-bottom: 1rem;
 }
 
 .resultIcon {
@@ -15,6 +16,8 @@
   background-color: #c8c9ca;
   width: 80%;
   padding: 0.5rem;
+  text-align: left;
+  font-weight: 600;
 }
 
 .resultNumber {
