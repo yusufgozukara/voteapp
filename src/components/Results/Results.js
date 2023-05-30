@@ -13,11 +13,23 @@ const Results = ({ people }) => {
     setValidVotes(total);
   });
   return (
-    <div className="resultdiv">
-      <p className="resultIcon">toplam</p>
-      <p className="resultTitle">Geçerli Oy</p>
-      <p className="resultNumber">{validVotes}</p>
-    </div>
+    <>
+      <div className="resultdiv">
+        <p className="resultIcon">çarpı</p>
+        <p className="resultTitle">Geçersiz Oy</p>
+        <p className="resultNumber">{validVotes}</p>
+      </div>
+      <div className="resultdiv">
+        <p className="resultIcon">nike</p>
+        <p className="resultTitle">Geçerli Oy</p>
+        <p className="resultNumber">{validVotes}</p>
+      </div>
+      <div className="resultdiv">
+        <p className="resultIcon">zarf</p>
+        <p className="resultTitle">Toplam</p>
+        <p className="resultNumber">{validVotes}</p>
+      </div>
+    </>
   );
 };
 
