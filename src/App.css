@@ -26,6 +26,7 @@
   padding: 2rem;
   margin: auto;
   font-size: 1.3rem;
+  font-weight: 600;
   line-height: 20px;
 }
 
@@ -63,4 +64,13 @@
   /* margin: 1rem; */
   font-size: 3rem;
   line-height: 20px;
+}
+
+.resetpage {
+  margin: 1rem;
+  padding: 0.5rem 3rem;
+  border-radius: 7px;
+  background-color: #333549;
+  color: white;
+  border: 1px solid white;
 }

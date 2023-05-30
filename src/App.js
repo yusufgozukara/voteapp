@@ -2,9 +2,9 @@ import "./App.css";
 import Card from "./components/Card/Card";
 import InvalidVote from "./components/InvalidVote/InvalidVote";
 import Results from "./components/Results/Results";
+import Schoolandbox from "./components/Schoolandbox/Schoolandbox";
 import persons from "./person.json";
-import { useEffect, useState } from "react";
-import results from "./results.json";
+import { useState } from "react";
 
 function App() {
   const [people, setPeople] = useState(
@@ -21,10 +21,9 @@ function App() {
         ))}
       </div>
       <InvalidVote />
-
-      {/* {results.map((result) => ( */}
-      <Results /*result={result}*/ people={people} />
-      {/* // ))} */}
+      <Results people={people} />
+      <Schoolandbox />
+      <button className="resetpage">Baştan Say</button>
     </div>
   );
 }
