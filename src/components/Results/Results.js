@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./Results.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 
 const Results = ({ people }) => {
   // const { title, img } = result;
@@ -17,12 +19,16 @@ const Results = ({ people }) => {
   return (
     <>
       <div className="resultdiv">
-        <p className="resultIcon">çarpı</p>
+        <p className="resultIcon">
+          <FontAwesomeIcon icon={faX} />
+        </p>
         <p className="resultTitle">Geçersiz Oy</p>
         <p className="resultNumber">{validVotes}</p>
       </div>
       <div className="resultdiv">
-        <p className="resultIcon">nike</p>
+        <p className="resultIcon">
+          <FontAwesomeIcon icon={faCheck} />
+        </p>
         <p className="resultTitle">Geçerli Oy</p>
         <p className="resultNumber">{validVotes}</p>
       </div>
