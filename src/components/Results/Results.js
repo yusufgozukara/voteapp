@@ -5,13 +5,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 
-const Results = ({
-  people,
-  invalidPlus,
-  invalidMinus,
-  invalidVote,
-  setInvalidVote,
-}) => {
+const Results = ({ people, invalidPlus, invalidMinus, invalidVote }) => {
   // const { title, img } = result;
   let [validVotes, setValidVotes] = useState(0);
 

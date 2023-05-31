@@ -12,15 +12,15 @@ function App() {
       return { ...person, vote: 0 };
     })
   );
-
   const [invalidVote, setInvalidVote] = useState(0);
-  const invalidPlus = () => {
-    // let temp1 = setInvalidVote += invalidVote
-    console.log("geçersiz arttı.");
-  };
-  const invalidMinus = () => {
-    console.log("geçersiz azaldı.");
-  };
+
+  // const invalidPlus = () => {
+  //   // let temp1 = setInvalidVote += invalidVote
+  //   console.log("geçersiz arttı.");
+  // };
+  // const invalidMinus = () => {
+  //   console.log("geçersiz azaldı.");
+  // };
 
   return (
     <div className="general">
@@ -30,15 +30,15 @@ function App() {
         ))}
       </div>
       <InvalidVote
-        invalidPlus={invalidPlus}
-        invalidMinus={invalidMinus}
         invalidVote={invalidVote}
         setInvalidVote={setInvalidVote}
+        // invalidPlus={invalidPlus} invalidMinus={invalidMinus}
       />
       <Results
         people={people}
-        invalidPlus={invalidPlus}
-        invalidMinus={invalidMinus}
+        invalidVote={invalidVote}
+        // invalidPlus={invalidPlus}
+        // invalidMinus={invalidMinus}
       />
       <Schoolandbox />
       <button className="resetpage">Baştan Say</button>
