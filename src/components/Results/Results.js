@@ -5,7 +5,13 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 
-const Results = ({ people }) => {
+const Results = ({
+  people,
+  invalidPlus,
+  invalidMinus,
+  invalidVote,
+  setInvalidVote,
+}) => {
   // const { title, img } = result;
   let [validVotes, setValidVotes] = useState(0);
 
@@ -23,7 +29,7 @@ const Results = ({ people }) => {
           <FontAwesomeIcon icon={faX} />
         </p>
         <p className="resultTitle">Geçersiz Oy</p>
-        <p className="resultNumber">{validVotes}</p>
+        <p className="resultNumber">{invalidVote}</p>
       </div>
       <div className="resultdiv">
         <p className="resultIcon">
