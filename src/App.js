@@ -14,13 +14,10 @@ function App() {
   );
   const [invalidVote, setInvalidVote] = useState(0);
 
-  // const invalidPlus = () => {
-  //   // let temp1 = setInvalidVote += invalidVote
-  //   console.log("geçersiz arttı.");
-  // };
-  // const invalidMinus = () => {
-  //   console.log("geçersiz azaldı.");
-  // };
+  const resetPage = () => {
+    alert("Baştan saymak için emin misiniz?");
+    setInvalidVote(0);
+  };
 
   return (
     <div className="general">
@@ -29,19 +26,12 @@ function App() {
           <Card people={people} setPeople={setPeople} person={person} />
         ))}
       </div>
-      <InvalidVote
-        invalidVote={invalidVote}
-        setInvalidVote={setInvalidVote}
-        // invalidPlus={invalidPlus} invalidMinus={invalidMinus}
-      />
-      <Results
-        people={people}
-        invalidVote={invalidVote}
-        // invalidPlus={invalidPlus}
-        // invalidMinus={invalidMinus}
-      />
+      <InvalidVote invalidVote={invalidVote} setInvalidVote={setInvalidVote} />
+      <Results people={people} invalidVote={invalidVote} />
       <Schoolandbox />
-      <button className="resetpage">Baştan Say</button>
+      <button onClick={() => resetPage()} className="resetpage">
+        Baştan Say
+      </button>
     </div>
   );
 }

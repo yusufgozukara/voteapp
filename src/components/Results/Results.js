@@ -9,11 +9,9 @@ const Results = ({ people, invalidPlus, invalidMinus, invalidVote }) => {
   let [validVotes, setValidVotes] = useState(0);
 
   useEffect(() => {
-    // let total2 = 0;
     let validtotal = 0;
     people.forEach((element) => {
       validtotal += element.vote;
-      // total2 = total + invalidVote;
     });
 
     setValidVotes(validtotal);
