@@ -6,16 +6,21 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 
 const Results = ({ people, invalidPlus, invalidMinus, invalidVote }) => {
-  // const { title, img } = result;
   let [validVotes, setValidVotes] = useState(0);
 
   useEffect(() => {
-    let total = 0;
+    // let total2 = 0;
+    let validtotal = 0;
     people.forEach((element) => {
-      total += element.vote;
+      validtotal += element.vote;
+      // total2 = total + invalidVote;
     });
-    setValidVotes(total);
+
+    setValidVotes(validtotal);
   });
+
+  const topTotal = validVotes + invalidVote;
+
   return (
     <>
       <div className="resultdiv">
@@ -37,7 +42,7 @@ const Results = ({ people, invalidPlus, invalidMinus, invalidVote }) => {
           <FontAwesomeIcon icon={faEnvelope} />
         </p>
         <p className="resultTitle">Toplam</p>
-        <p className="resultNumber">{validVotes}</p>
+        <p className="resultNumber">{topTotal}</p>
       </div>
     </>
   );
