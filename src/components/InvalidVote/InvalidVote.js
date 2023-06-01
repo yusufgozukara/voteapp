@@ -2,7 +2,11 @@ import React from "react";
 import { useState } from "react";
 
 const InvalidVote = ({ invalidVote, setInvalidVote }) => {
-  // console.log(invalidVote);
+  // const zeroset = (diff) => {
+  //   if (!(diff === -1)) {
+  //   }
+  // };
+
   return (
     <div className="invalid">
       <div className="invalidfirstdiv">
@@ -11,7 +15,10 @@ const InvalidVote = ({ invalidVote, setInvalidVote }) => {
 
       <div className="invalidseconddiv">
         <button
-          onClick={() => setInvalidVote(invalidVote - 1)}
+          // onClick={() => setInvalidVote(invalidVote - 1)}
+          onClick={() => {
+            if (!(invalidVote === 0)) setInvalidVote(invalidVote - 1);
+          }}
           className="invalidMinus"
         >
           -
