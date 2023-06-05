@@ -33,6 +33,7 @@ function App() {
       <button onClick={() => resetPage()} className="resetpage">
         Baştan Say
       </button>
+      <button>Ekran Görüntüsü Al</button>
     </div>
   );
 }
