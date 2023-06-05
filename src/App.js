@@ -6,6 +6,7 @@ import Results from "./components/Results/Results";
 import Schoolandbox from "./components/Schoolandbox/Schoolandbox";
 import persons from "./person.json";
 import { createRef, useState } from "react";
+import * as htmlToImage from "html-to-image";
 
 function App() {
   const [people, setPeople] = useState(
@@ -27,6 +28,11 @@ function App() {
     type: "image/jpeg",
     quality: 1.0,
   });
+
+  const takeScreenShot = async (node) => {
+    const dataURI = await htmlToImage.toJpeg(node);
+    return dataURI;
+  };
 
   const download = (image, { name = "voteResult", extension = "jpg" } = {}) => {
     const a = document.createElement("a");
