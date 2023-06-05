@@ -36,7 +36,10 @@ function App() {
   };
 
   const downloadScreenshot = () => {
-    takeScreenshot(ref.current).then(download);
+    takeScreenshot(ref.current, {
+      allowTaint: false,
+      useCORS: true,
+    }).then(download);
   };
 
   return (
