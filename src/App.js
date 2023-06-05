@@ -1,10 +1,11 @@
+import { createFileName, useScreenshot } from "use-react-screenshot";
 import "./App.css";
 import Card from "./components/Card/Card";
 import InvalidVote from "./components/InvalidVote/InvalidVote";
 import Results from "./components/Results/Results";
 import Schoolandbox from "./components/Schoolandbox/Schoolandbox";
 import persons from "./person.json";
-import { useState } from "react";
+import { createRef, useState } from "react";
 
 function App() {
   const [people, setPeople] = useState(
@@ -20,8 +21,29 @@ function App() {
     // setInvalidVote(0);
   };
 
+  const ref = createRef(null);
+
+  const [image, takeScreenshot] = useScreenshot({
+    type: "image/jpeg",
+    quality: 1.0,
+  });
+
+  const download = (
+    image,
+    { name = "sampleimage", extension = "jpg" } = {}
+  ) => {
+    const a = document.createElement("a");
+    a.href = image;
+    a.download = createFileName(extension, name);
+    a.click();
+  };
+
+  const downloadScreenshot = () => {
+    takeScreenshot(ref.current).then(download);
+  };
+
   return (
-    <div className="general">
+    <div ref={ref} className="general">
       <div className="cardContainer">
         {people.map((person) => (
           <Card people={people} setPeople={setPeople} person={person} />
@@ -33,7 +55,9 @@ function App() {
       <button onClick={() => resetPage()} className="resetpage">
         Baştan Say
       </button>
-      <button className="resetpage">Ekran Görüntüsü Al</button>
+      <button onClick={downloadScreenshot} className="resetpage">
+        Ekran Görüntüsü Al
+      </button>
     </div>
   );
 }
