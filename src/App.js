@@ -28,10 +28,7 @@ function App() {
     quality: 1.0,
   });
 
-  const download = (
-    image,
-    { name = "sampleimage", extension = "jpg" } = {}
-  ) => {
+  const download = (image, { name = "voteResult", extension = "jpg" } = {}) => {
     const a = document.createElement("a");
     a.href = image;
     a.download = createFileName(extension, name);
@@ -43,15 +40,21 @@ function App() {
   };
 
   return (
-    <div ref={ref} className="general">
-      <div className="cardContainer">
-        {people.map((person) => (
-          <Card people={people} setPeople={setPeople} person={person} />
-        ))}
+    <div className="general">
+      <div ref={ref}>
+        <div className="cardContainer">
+          {people.map((person) => (
+            <Card people={people} setPeople={setPeople} person={person} />
+          ))}
+        </div>
+        <InvalidVote
+          invalidVote={invalidVote}
+          setInvalidVote={setInvalidVote}
+        />
+        <Results people={people} invalidVote={invalidVote} />
+        <Schoolandbox />
       </div>
-      <InvalidVote invalidVote={invalidVote} setInvalidVote={setInvalidVote} />
-      <Results people={people} invalidVote={invalidVote} />
-      <Schoolandbox />
+
       <button onClick={() => resetPage()} className="resetpage">
         Baştan Say
       </button>
