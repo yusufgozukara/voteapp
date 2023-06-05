@@ -67,6 +67,7 @@
 }
 
 .resetpage {
+  width: 250px;
   margin: 1rem;
   padding: 0.5rem 3rem;
   border-radius: 7px;
