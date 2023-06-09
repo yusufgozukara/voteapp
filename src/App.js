@@ -17,7 +17,7 @@ function App() {
   const [invalidVote, setInvalidVote] = useState(0);
 
   const resetPage = () => {
-    alert("Tüm veriler silinecektir. Onaylıyor musunuz?");
+    alert("Tüm veriler silinecektir. Onaylıyor musunuz???");
     window.location.reload(false);
     // setInvalidVote(0);
   };
